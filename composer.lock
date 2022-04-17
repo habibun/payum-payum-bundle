@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "cab2bbe7feb61bb29f07455a8caccd5c",
+    "content-hash": "3fdc83d744a119cbc39683b744d432bf",
     "packages": [
         {
             "name": "alcohol/iso4217",
@@ -1485,6 +1485,122 @@
                 "source": "https://github.com/doctrine/sql-formatter/tree/1.1.2"
             },
             "time": "2021-11-05T11:11:14+00:00"
+        },
+        {
+            "name": "flux-se/payum-stripe",
+            "version": "v2.0.7",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/FLUX-SE/PayumStripe.git",
+                "reference": "7aa073e44a1d50572137146351b124078af24b36"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/FLUX-SE/PayumStripe/zipball/7aa073e44a1d50572137146351b124078af24b36",
+                "reference": "7aa073e44a1d50572137146351b124078af24b36",
+                "shasum": ""
+            },
+            "require": {
+                "payum/core": "^1.6",
+                "stripe/stripe-php": "^7.88"
+            },
+            "require-dev": {
+                "ext-curl": "*",
+                "ext-json": "*",
+                "php-http/guzzle6-adapter": "^2.0",
+                "phpstan/phpstan": "^0.12",
+                "phpunit/phpunit": "^8|^9",
+                "symplify/easy-coding-standard": "^8|^9"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.0-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "FluxSE\\PayumStripe\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Francis HILAIRE",
+                    "email": "Prometee@users.noreply.github.com"
+                }
+            ],
+            "description": "Payum Stripe gateways",
+            "keywords": [
+                "authorize",
+                "payment",
+                "payum",
+                "stripe"
+            ],
+            "support": {
+                "issues": "https://github.com/FLUX-SE/PayumStripe/issues",
+                "source": "https://github.com/FLUX-SE/PayumStripe/tree/v2.0.7"
+            },
+            "time": "2022-03-17T17:24:26+00:00"
+        },
+        {
+            "name": "flux-se/payum-stripe-bundle",
+            "version": "v2.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/FLUX-SE/PayumStripeBundle.git",
+                "reference": "9c3770e0aec7b88300fc9f68b981f8997db682e9"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/FLUX-SE/PayumStripeBundle/zipball/9c3770e0aec7b88300fc9f68b981f8997db682e9",
+                "reference": "9c3770e0aec7b88300fc9f68b981f8997db682e9",
+                "shasum": ""
+            },
+            "require": {
+                "flux-se/payum-stripe": "^2.0",
+                "payum/payum-bundle": "^2.4",
+                "symfony/config": "^4.4|^5.2",
+                "symfony/dependency-injection": "^4.4|^5.2",
+                "symfony/http-kernel": "^4.4|^5.2"
+            },
+            "require-dev": {
+                "php-http/guzzle6-adapter": "^2.0",
+                "phpstan/phpstan": "^0.12.82",
+                "phpunit/phpunit": "^8|^9",
+                "symplify/easy-coding-standard": "^8|^9",
+                "vimeo/psalm": "^4.3"
+            },
+            "type": "symfony-bundle",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.0-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "FluxSE\\PayumStripeBundle\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Francis HILAIRE",
+                    "email": "Prometee@users.noreply.github.com"
+                }
+            ],
+            "description": "Payum Stripe gateways bundle",
+            "support": {
+                "issues": "https://github.com/FLUX-SE/PayumStripeBundle/issues",
+                "source": "https://github.com/FLUX-SE/PayumStripeBundle/tree/v2.0.0"
+            },
+            "time": "2021-04-28T09:27:10+00:00"
         },
         {
             "name": "friendsofphp/proxy-manager-lts",

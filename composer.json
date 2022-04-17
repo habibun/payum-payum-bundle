@@ -14,6 +14,7 @@
         "doctrine/doctrine-bundle": "^2.6",
         "doctrine/doctrine-migrations-bundle": "^3.2",
         "doctrine/orm": "^2.11",
+        "flux-se/payum-stripe-bundle": "^2.0",
         "guzzlehttp/guzzle": "^7.3",
         "guzzlehttp/promises": "^1.4",
         "nyholm/psr7": "^1.5",

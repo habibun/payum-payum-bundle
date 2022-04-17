@@ -26,9 +26,9 @@ class PaymentController extends AbstractController
 
         $payment = $storage->create();
         $payment->setNumber(uniqid());
-        $payment->setCurrencyCode('EUR');
-        $payment->setTotalAmount(123); // 1.23 EUR
-        $payment->setDescription('A description');
+        $payment->setCurrencyCode('USD');
+        $payment->setTotalAmount(123); // 1.23 USD
+        $payment->setDescription('pay with dollar');
         $payment->setClientId('anId');
         $payment->setClientEmail('foo@example.com');
 

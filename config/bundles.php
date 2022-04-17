@@ -10,4 +10,5 @@ return [
     Twig\Extra\TwigExtraBundle\TwigExtraBundle::class => ['all' => true],
     Payum\Bundle\PayumBundle\PayumBundle::class => ['all' => true],
     Doctrine\Bundle\MigrationsBundle\DoctrineMigrationsBundle::class => ['all' => true],
+    FluxSE\PayumStripeBundle\FluxSEPayumStripeBundle::class => ['all' => true],
 ];

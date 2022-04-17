@@ -11,6 +11,12 @@ payum:
             factory: stripe_checkout
             publishable_key: '%env(STRIPE_PUBLISHABLE_KEY)%'
             secret_key: '%env(STRIPE_SECRET_KEY)%'
+        stripe_checkout_session:
+            factory: stripe_checkout_session
+            publishable_key: '%env(STRIPE_PUBLISHABLE_KEY)%'
+            secret_key: '%env(STRIPE_SECRET_KEY)%'
+            webhook_secret_keys:
+                - whsec_test_webhookkey
     dynamic_gateways:
         config_storage:
             App\Entity\GatewayConfig: { doctrine: orm }
