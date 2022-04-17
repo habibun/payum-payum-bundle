@@ -20,7 +20,7 @@ class PaymentController extends AbstractController
     public function prepareAction(Payum $payum)
     {
 //        $gatewayName = 'offline';
-        $gatewayName = 'stripe';
+        $gatewayName = 'stripe_checkout_session';
 
         $storage = $payum->getStorage('App\Entity\Payment');
 
