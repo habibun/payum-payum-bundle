@@ -20,3 +20,5 @@ payum:
     dynamic_gateways:
         config_storage:
             App\Entity\GatewayConfig: { doctrine: orm }
+        encryption:
+            defuse_secret_key: '%env(PAYUM_CYPHER_KEY)%'
