@@ -7,6 +7,7 @@ use Payum\Core\Request\GetHumanStatus;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
 /**
@@ -73,5 +74,32 @@ class PaymentController extends AbstractController
                 'details' => $payment->getDetails(),
             ],
         ]);
+    }
+
+    /**
+     * @Route("/webhook", name="webhook")
+     */
+    public function webhookAction(Request $request)
+    {
+        $type = $request->request->get('type');
+        switch ($type) {
+            case 'payment_intent.succeeded':
+                $paymentIntent = $request->request->get('data')['object']['amount'];
+                echo 'PaymentIntent for '.$paymentIntent.' is succeeded!';
+                break;
+
+            case 'payment_intent.payment_failed':
+                $paymentIntent = $request->request->get('data')['object']['amount'];
+                echo 'PaymentIntent for '.$paymentIntent.' is failed!';
+                break;
+
+            default:
+                echo 'Received unknown event type';
+        }
+
+        $response = new Response();
+        $response->setStatusCode(Response::HTTP_OK);
+
+        return $response->send();
     }
 }
