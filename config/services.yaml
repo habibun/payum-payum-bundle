@@ -28,3 +28,11 @@ services:
 
     # add more service definitions when explicit configuration is needed
     # please note that last definitions always *replace* previous ones
+
+    App\Service\SetStripeApiVersionExtension:
+        public: true
+        arguments:
+            $apiVersion: '2019-12-03'
+        tags:
+            - name: payum.extension
+              factory: stripe_checkout_session
